@@ -7,7 +7,7 @@ module.exports = {
   },
   getUsersCookie(env) {
     const users = [env.COOKIE];
-
+    console.log(users);
     const keys = Object.keys(env).filter(key => key.match(/^COOKIE_([0-9])+$/));
     keys.forEach(key => users.push(env[key]));
 
